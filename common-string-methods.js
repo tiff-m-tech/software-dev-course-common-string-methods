@@ -5,6 +5,7 @@ Practice Problem #1
 Activity 1: Searching Strings
 Write a program to:
 Check if the text "JavaScript" is in the string "Learning JavaScript is fun!" using includes.
+
 Find the position of the word "fun" in the string.
 
 Activity 2: Transforming Strings
@@ -64,6 +65,44 @@ Complete the following tasks and assign the results to the specified variables. 
   - Extract the word "Bootcamp" from the string using slice and assign the result to a variable named extractedBootcamp.
 
 */
+
+// Activity 1
+let activityOneString = "Learning JavaScript is fun!"
+let checkFor = activityOneString.includes("JavaScript")
+let positionOf = activityOneString.indexOf("fun")
+console.log(checkFor, positionOf)
+
+// Activity 2
+let activityTwoString = " CODE BOOTCAMP "
+let convertTo = activityTwoString.trim().toLowerCase()
+let transformedString = convertTo.replace("bootcamp", "JavaScript")
+console.log(transformedString)
+
+// Activity 3
+let activityThreeString = "Coding is fun and educational"
+let splitString = activityThreeString.split(" ")
+console.log(splitString)
+
+// Activity 4
+let activityfourString = "Bootcamp"
+let retrieveString = activityfourString.charAt(0)
+let extractString = activityfourString.slice(4)
+console.log(retrieveString, extractString)
+
+// Advanced Challenge
+let orderInfo = `Customer: John Doe
+Order: Apple, Banana, Grape
+Total: $20.50`
+
+let lines = orderInfo.split("\n") // breaks the text into 3 lines
+
+let customerName = lines[0].replace("Customer: ", "") // removes the label so only the name is left
+let orderItems = lines[1].replace("Order: ", "").split(", ")
+let totalPrice = lines[2].toUpperCase()
+
+console.log(customerName)
+console.log(orderItems)
+console.log(totalPrice)
 
 //Starter Code
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
